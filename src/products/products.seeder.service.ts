@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Product } from './entities/product.entity';
 import { CreateProductDto } from './dto/create-product.dto';
-import { faker } from '@faker-js/faker';
+import { fakerFR as faker } from '@faker-js/faker';
 @Injectable()
 export class ProductsSeederService implements OnApplicationBootstrap {
   constructor(
@@ -24,7 +24,7 @@ export class ProductsSeederService implements OnApplicationBootstrap {
 
   private getSampleProducts(): CreateProductDto[] {
     const products: CreateProductDto[] = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
       products.push({
         name: faker.commerce.productName(),
         description: faker.commerce.productDescription(),
