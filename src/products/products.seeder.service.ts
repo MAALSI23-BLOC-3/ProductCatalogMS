@@ -40,8 +40,9 @@ export class ProductsSeederService implements OnApplicationBootstrap {
           'Plastic',
           'Metal',
         ]),
-        images: Array.from({ length: 3 }, () =>
-          faker.image.urlLoremFlickr({ category: 'sport' }),
+        images: Array.from(
+          { length: 3 },
+          () => 'https://picsum.photos/200/300',
         ),
       });
     }
